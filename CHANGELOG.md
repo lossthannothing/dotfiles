@@ -1,5 +1,15 @@
 # aquapaka-dotfiles
 
+## 3.1.7
+
+### Patch Changes
+
+- 321563d: fix: correct shuri theme styles
+- fd46994: fix: scale zebar to fit smaller screen sizes
+- 0f7f080: fix: add more bottom padding for aqua theme
+- dc4443e: fix: wrong icon in aqua theme
+- 036e2cc: feat: add more scale break points
+
 ## 3.1.6
 
 ### Patch Changes

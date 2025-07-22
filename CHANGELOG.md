@@ -1,5 +1,11 @@
 # aquapaka-dotfiles
 
+## 3.2.0
+
+### Minor Changes
+
+- 3bad55c: feat: new theme jade, add additional rice configuration, improve docs
+
 ## 3.1.7
 
 ### Patch Changes

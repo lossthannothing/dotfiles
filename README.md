@@ -9,6 +9,12 @@ Yes it's **Windows**
 
 ## Introduction
 
+### 🐚 Native Shell Scripting — No WSL, No Virtualization
+
+Run real **shell scripts** and **Linux commands** natively on Windows — no WSL, no virtualization, no nonsense. With this setup, you get the full power of Unix-like scripting without sacrificing compatibility.
+
+Why write PowerShell when you can use familiar ```.sh``` scripts? And if you still need PowerShell? You can run both side by side. It's like having the best of both worlds — the flexibility of Linux with the accessibility of Windows.
+
 ### ❤️ For the Ricing and Unixporn Enthusiasts
 
 Are you **a ricing nerd** or **a unixporn enthusiast** who has to use Windows but still misses the customizability of Linux? Look no further! This repository is a treasure trove of my ricing dotfiles tailored specifically for Windows.
@@ -37,6 +43,12 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 ## 🎨 Themes
 
 ℹ️Note: This dotfiles are configured specifically for my 1440p screen, so things might appear larger on smaller screens. I suggest using my dotfiles as a base and customizing it to fit your specific needs.
+
+| ✨ jade |
+| :---: |
+| A soul with raw edges, nostalgic warmth, and unspoken strength |
+|![jade-1](rice-previews/jade-1.png)|
+|![jade-2](rice-previews/jade-2.png)|
 
 | ✨ wasabi |
 | :---: |
@@ -145,6 +157,7 @@ Font need to be download and install manually *(Windows is planning to allows in
 - [Pixelcraft Nerd Font](https://github.com/jade-tam/Pixelcraft/releases) (please download and use Nerd Font version)
 - [Pixel Code](https://qwerasd205.github.io/PixelCode/)
 - [Monofur Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Monofur.zip)
+- [Space Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/SpaceMono.zip)
 
 ### Install chezmoi and apply dotfiles
 
@@ -230,6 +243,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zs
 - Themes:
   - [Tinted VSCode](https://marketplace.visualstudio.com/items?itemName=TintedTheming.base16-tinted-themes) - *using by other themes*
   - [Gruvbox Theme](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox) - *using by Wasabi theme*
+  - [Everforest](https://marketplace.visualstudio.com/items?itemName=sainnhe.everforest) - *using by Jade theme*
 - ADDITIONAL:
   - To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
   - To make VSCode window transparent: <https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit>

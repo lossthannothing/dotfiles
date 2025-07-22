@@ -8,6 +8,8 @@
   },
   "glazewmConfig": {
     "focusedWindowsColor": "#c594ff",
-    "otherWindowsColor": "#2b213c"
+    "otherWindowsColor": "#2b213c",
+    "windowsGap": "8px",
+    "cornerStyle": "rounded"
   }
 }

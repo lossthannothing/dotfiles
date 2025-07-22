@@ -1,0 +1,15 @@
+{
+  "windowsTheme": "dark",
+  "windowsTerminalTheme": "Jade",
+  "windowsTerminalFont": {
+    "cellHeight": "1.2",
+    "face": "SpaceMono Nerd Font",
+    "size": 14
+  },
+  "glazewmConfig": {
+    "focusedWindowsColor": "#b39a8d",
+    "otherWindowsColor": "#0f1e23",
+    "windowsGap": "12px",
+    "cornerStyle": "small_rounded"
+  }
+}

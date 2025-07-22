@@ -56,7 +56,7 @@
             case "ethernet":
               return (
                 <>
-                  <span className="icon ethernet-icon green"></span>
+                  <span className="icon ethernet-icon green">󰈀</span>
                   <span className="green">Connected</span>
                 </>
               );
@@ -65,77 +65,57 @@
                 return (
                   <>
                     <span className="icon wifi-icon green"></span>
-                    <span className="green">◦◦◦◦</span>
                   </>
                 );
               } else if (networkOutput.defaultGateway?.signalStrength >= 65) {
                 return (
                   <>
                     <span className="icon wifi-icon yellow"></span>
-                    <span className="yellow">◦◦◦</span>
-                    <span className="black">◦</span>
                   </>
                 );
               } else if (networkOutput.defaultGateway?.signalStrength >= 40) {
                 return (
                   <>
                     <span className="icon wifi-icon yellow"></span>
-                    <span className="yellow">◦◦</span>
-                    <span className="black">◦◦</span>
                   </>
                 );
               } else if (networkOutput.defaultGateway?.signalStrength >= 25) {
                 return (
                   <>
-                    <span className="icon wifi-icon red"></span>
-                    <span className="red">◦</span>
-                    <span className="black">◦◦◦</span>
+                    <span className="icon wifi-icon mangenta"></span>
                   </>
                 );
               } else {
                 return (
                   <>
-                    <span className="icon wifi-icon red"></span>
-                    <span className="red"></span>
-                    <span className="black">◦◦◦◦</span>
+                    <span className="icon wifi-icon mangenta"></span>
                   </>
                 );
               }
             default:
-              return <span className="red">⌀ No internet</span>;
+              return <span className="mangenta">⌀ No internet</span>;
           }
         }
 
         // Get icon to show for how much of the battery is charged.
         function getBatteryIcon(batteryOutput) {
-          if (batteryOutput.chargePercent > 80) return "";
-          if (batteryOutput.chargePercent > 60) return "";
-          if (batteryOutput.chargePercent > 50) return "";
-          if (batteryOutput.chargePercent > 40) return "";
-          if (batteryOutput.chargePercent > 20) return "";
-          return "";
+          if (batteryOutput.chargePercent > 80) return "󰁹";
+          if (batteryOutput.chargePercent > 60) return "󰂁";
+          if (batteryOutput.chargePercent > 50) return "󰂀";
+          if (batteryOutput.chargePercent > 40) return "󰁿";
+          if (batteryOutput.chargePercent > 20) return "󰁾";
+          return "󰁺";
         }
-        // function getBatteryIcon(batteryOutput) {
-        //   if (batteryOutput.chargePercent > 90)
-        //     return <i className="nf nf-fa-battery_4"></i>;
-        //   if (batteryOutput.chargePercent > 70)
-        //     return <i className="nf nf-fa-battery_3"></i>;
-        //   if (batteryOutput.chargePercent > 40)
-        //     return <i className="nf nf-fa-battery_2"></i>;
-        //   if (batteryOutput.chargePercent > 20)
-        //     return <i className="nf nf-fa-battery_1"></i>;
-        //   return <i className="nf nf-fa-battery_0"></i>;
-        // }
 
         function getAudioIcon(volume) {
           if (volume > 20) {
-            return <span className="icon audio-icon cyan">墳</span>;
+            return <span className="icon audio-icon green"></span>;
           } else if (volume > 10) {
-            return <span className="icon audio-icon cyan">奔</span>;
+            return <span className="icon audio-icon green"></span>;
           } else if (volume > 0) {
-            return <span className="icon audio-icon cyan">奄</span>;
+            return <span className="icon audio-icon green"></span>;
           } else {
-            return <span className="icon audio-icon red">婢</span>;
+            return <span className="icon audio-icon magenta"></span>;
           }
         }
 
@@ -147,56 +127,27 @@
             case "clear_night":
               return <span className="icon weather-icon yellow">☽</span>;
             case "cloudy_day":
-              return <span className="icon weather-icon white">☁</span>;
+              return <span className="icon weather-icon green"></span>;
             case "cloudy_night":
-              return <span className="icon weather-icon white">☁</span>;
+              return <span className="icon weather-icon green"></span>;
             case "light_rain_day":
-              return <span className="icon weather-icon blue">☂</span>;
+              return <span className="icon weather-icon blue"></span>;
             case "light_rain_night":
-              return <span className="icon weather-icon blue">☂</span>;
+              return <span className="icon weather-icon blue"></span>;
             case "heavy_rain_day":
-              return <span className="icon weather-icon blue">☔</span>;
+              return <span className="icon weather-icon blue"></span>;
             case "heavy_rain_night":
-              return <span className="icon weather-icon blue">☔</span>;
+              return <span className="icon weather-icon blue"></span>;
             case "snow_day":
-              return <span className="icon weather-icon white">☃</span>;
+              return <span className="icon weather-icon green"></span>;
             case "snow_night":
-              return <span className="icon weather-icon white">☃</span>;
+              return <span className="icon weather-icon green"></span>;
             case "thunder_day":
-              return <span className="icon weather-icon cyan">⚡</span>;
+              return <span className="icon weather-icon cyan"></span>;
             case "thunder_night":
-              return <span className="icon weather-icon cyan">⚡</span>;
+              return <span className="icon weather-icon cyan"></span>;
           }
         }
-
-        // function getWeatherIcon(weatherOutput) {
-        //   switch (weatherOutput.status) {
-        //     case 'clear_day':
-        //       return <i className="nf nf-weather-day_sunny"></i>;
-        //     case 'clear_night':
-        //       return <i className="nf nf-weather-night_clear"></i>;
-        //     case 'cloudy_day':
-        //       return <i className="nf nf-weather-day_cloudy"></i>;
-        //     case 'cloudy_night':
-        //       return <i className="nf nf-weather-night_alt_cloudy"></i>;
-        //     case 'light_rain_day':
-        //       return <i className="nf nf-weather-day_sprinkle"></i>;
-        //     case 'light_rain_night':
-        //       return <i className="nf nf-weather-night_alt_sprinkle"></i>;
-        //     case 'heavy_rain_day':
-        //       return <i className="nf nf-weather-day_rain"></i>;
-        //     case 'heavy_rain_night':
-        //       return <i className="nf nf-weather-night_alt_rain"></i>;
-        //     case 'snow_day':
-        //       return <i className="nf nf-weather-day_snow"></i>;
-        //     case 'snow_night':
-        //       return <i className="nf nf-weather-night_alt_snow"></i>;
-        //     case 'thunder_day':
-        //       return <i className="nf nf-weather-day_lightning"></i>;
-        //     case 'thunder_night':
-        //       return <i className="nf nf-weather-night_alt_lightning"></i>;
-        //   }
-        // }
 
         function formatUptime(ms) {
           const totalMinutes = Math.floor(ms / (1000 * 60));
@@ -215,155 +166,140 @@
         return (
           <div className="app">
             <div className="left">
-              <div class="scale-wrapper left-scale">
-                {output.host && (
-                  <>
-                    <div className="os">
-                      <span className="icon os-icon yellow">⭐</span>
-                      <span className="info">{output.host.hostname}</span>
-                    </div>
-                    <div className="uptime">
-                      <span className="icon uptime-icon magenta">⌛</span>
-                      <span className="info">
-                        {formatUptime(output.host.uptime)}
-                      </span>
-                    </div>
-                  </>
-                )}
-
-                {output.media?.currentSession && (
-                  <>
-                    <div className="media">
-                      <span className="icon media-icon cyan">♫</span>
-                      <span className="info">
-                        {output.media.currentSession.title}
-                      </span>
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-
-            <div className="center">
-              <div class="scale-wrapper center-scale">
-                {output.glazewm && (
-                  <div className="workspaces">
-                    {output.glazewm.currentWorkspaces.map((workspace) => (
-                      <button
-                        className={`workspace ${
-                          workspace.hasFocus && "focused"
-                        } ${workspace.children.length && "has-child"}`}
-                        onClick={() =>
-                          output.glazewm.runCommand(
-                            `focus --workspace ${workspace.name}`
-                          )
-                        }
-                        key={workspace.name}
-                      >
-                        {workspace.hasFocus
-                          ? "❤"
-                          : workspace.children.length
-                          ? "●"
-                          : "◯"}
-                      </button>
-                    ))}
+              {output.host && (
+                <>
+                  <div className="box">
+                    <span className="icon os-icon"></span>
+                    <span className="info">{output.host.hostname}</span>
                   </div>
-                )}
-              </div>
+                </>
+              )}
+              {output.glazewm && (
+                <div className="box">
+                  {output.glazewm.currentWorkspaces.map((workspace) => (
+                    <button
+                      className={`workspace-button ${
+                        workspace.hasFocus && "focused"
+                      } ${workspace.children.length && "has-child"}`}
+                      onClick={() =>
+                        output.glazewm.runCommand(
+                          `focus --workspace ${workspace.name}`
+                        )
+                      }
+                      key={workspace.name}
+                    >
+                      <span className="workspace-icon">
+                        {workspace.hasFocus
+                          ? "󰴈"
+                          : workspace.children.length
+                          ? ""
+                          : ""}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {output.media?.currentSession && (
+                <>
+                  <div className="box">
+                    <span className="icon media-icon"></span>
+                    <span className="info">
+                      {output.media.currentSession.title}
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
+
+            <div className="center"></div>
 
             <div className="right">
-              <div class="scale-wrapper right-scale">
-                {output.glazewm && (
-                  <>
-                    {output.glazewm.bindingModes.map((bindingMode) => (
-                      <button className="binding-mode" key={bindingMode.name}>
-                        {bindingMode.displayName ?? bindingMode.name}
-                      </button>
-                    ))}
-
-                    <button
-                      className={`tiling-direction-icon yellow`}
-                      onClick={() =>
-                        output.glazewm.runCommand("toggle-tiling-direction")
-                      }
-                    >
-                      {output.glazewm.tilingDirection === "horizontal"
-                        ? "⇄"
-                        : "⇵"}
+              {output.glazewm && (
+                <div className="box">
+                  {output.glazewm.bindingModes.map((bindingMode) => (
+                    <button className="binding-mode" key={bindingMode.name}>
+                      {bindingMode.displayName ?? bindingMode.name}
                     </button>
-                  </>
-                )}
+                  ))}
 
-                {output.network && (
-                  <div className="network">
-                    {getNetworkIcon(output.network)}
-                  </div>
-                )}
+                  <button
+                    className={`tiling-direction-icon`}
+                    onClick={() =>
+                      output.glazewm.runCommand("toggle-tiling-direction")
+                    }
+                  >
+                    {output.glazewm.tilingDirection === "horizontal"
+                      ? "⇄"
+                      : "⇵"}
+                  </button>
+                </div>
+              )}
 
-                {output.cpu && (
-                  <div className="cpu">
-                    <span className="icon cpu-icon red">✂</span>
-                    <span className="info">
-                      {Math.round(output.cpu.usage)}%
-                    </span>
-                  </div>
-                )}
+              {output.network && (
+                <div className="box">{getNetworkIcon(output.network)}</div>
+              )}
 
-                {output.memory && (
-                  <div className="memory">
-                    <span className="icon memory-icon green">☷</span>
-                    <span className="info">
-                      {bytesToGigabytes(output.memory.usedMemory)} GBs
-                    </span>
-                  </div>
-                )}
+              {output.cpu && (
+                <div className="box">
+                  <span className="icon cpu-icon"></span>
+                  <span className="info">{Math.round(output.cpu.usage)}%</span>
+                </div>
+              )}
 
-                {output.battery && (
-                  <div className="battery">
-                    {output.battery.state === "full" ? (
-                      <span className="icon full-icon green">✔</span>
-                    ) : output.battery.state === "charging" ? (
-                      <span className="icon charging-icon blue">⚡</span>
-                    ) : (
-                      ""
-                    )}
-                    <span className="icon battery-icon yellow">
-                      {getBatteryIcon(output.battery)}
-                    </span>
-                    <span className="info">
-                      {Math.round(output.battery.chargePercent)}%
-                    </span>
-                  </div>
-                )}
+              {output.memory && (
+                <div className="box">
+                  <span className="icon memory-icon"></span>
+                  <span className="info">
+                    {bytesToGigabytes(output.memory.usedMemory)} GBs
+                  </span>
+                </div>
+              )}
 
-                {output.audio?.defaultPlaybackDevice && (
-                  <div className="audio">
-                    <span className="icon audio-icon">
-                      {getAudioIcon(output.audio.defaultPlaybackDevice.volume)}
-                    </span>
-                    <span className="info">
-                      {Math.round(output.audio.defaultPlaybackDevice.volume)}%
-                    </span>
-                  </div>
-                )}
+              {output.battery && (
+                <div className="box">
+                  {output.battery.state === "full" ? (
+                    <span className="icon full-icon">✔</span>
+                  ) : output.battery.state === "charging" ? (
+                    <span className="icon charging-icon">󱐋</span>
+                  ) : (
+                    ""
+                  )}
+                  <span className="icon battery-icon">
+                    {getBatteryIcon(output.battery)}
+                  </span>
+                  <span className="info">
+                    {Math.round(output.battery.chargePercent)}%
+                  </span>
+                </div>
+              )}
 
-                {output.weather && (
-                  <div className="weather">
-                    {getWeatherIcon(output.weather)}
-                    <span className="info">
-                      {Math.round(output.weather.celsiusTemp)}°C
-                    </span>
-                  </div>
-                )}
+              {output.audio?.defaultPlaybackDevice && (
+                <div className="box">
+                  <span className="icon audio-icon">
+                    {getAudioIcon(output.audio.defaultPlaybackDevice.volume)}
+                  </span>
+                  <span className="info">
+                    {Math.round(output.audio.defaultPlaybackDevice.volume)}%
+                  </span>
+                </div>
+              )}
 
-                {output.date && (
-                  <div className="date">
-                    <span className="icon date-icon magenta">⌚</span>
-                    <span className="info">{output.date?.formatted}</span>
-                  </div>
-                )}
-              </div>
+              {output.weather && (
+                <div className="box">
+                  {getWeatherIcon(output.weather)}
+                  <span className="info">
+                    {Math.round(output.weather.celsiusTemp)}°C
+                  </span>
+                </div>
+              )}
+
+              {output.date && (
+                <div className="box">
+                  <span className="icon date-icon">󱑁</span>
+                  <span className="info">{output.date?.formatted}</span>
+                </div>
+              )}
             </div>
           </div>
         );

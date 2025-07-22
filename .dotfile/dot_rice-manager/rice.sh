@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("aqua" "wasabi" "shuri")
+avaiableThemes=("aqua" "wasabi" "shuri" "jade")
 
 usage() {
   printf "
@@ -16,6 +16,7 @@ Usage:
 `basename $0`\t[aqua]  \t A playful, mysterious girl with eyes like shimmering aqua, her movements graceful and quick, full of curiosity and charm
 \t[wasabi] \t Mysterious and alluring, with eyes like deep ocean blue and an aura of fire, she exudes both danger and enchantment
 \t[shuri] \t A gentle presence in shades of purple, like twilight’s soft embrace—quietly comforting, effortlessly lovely
+\t[jade] \t Introspective and layered, a soul with raw edges, nostalgic warmth, and unspoken strength
 "
 }
 
@@ -37,7 +38,24 @@ set_glazewm_config() {
   echo "Applying GlazeWM border color..."
   SETTING_FILE_PATH=$USERPROFILE\\.glzr\\glazewm\\config.yaml
   RICE_SETTING_FILE_PATH=./rices/$theme/settings.json
-  yq ".window_effects.focused_window.border.color = \"$(jq -r '.glazewmConfig.focusedWindowsColor' $RICE_SETTING_FILE_PATH)\" | .window_effects.other_windows.border.color = \"$(jq -r '.glazewmConfig.otherWindowsColor' $RICE_SETTING_FILE_PATH)\"" $SETTING_FILE_PATH > tmp.yaml && mv tmp.yaml $SETTING_FILE_PATH
+
+  focused_color=$(jq -r '.glazewmConfig.focusedWindowsColor' "$RICE_SETTING_FILE_PATH")
+  other_color=$(jq -r '.glazewmConfig.otherWindowsColor' "$RICE_SETTING_FILE_PATH")
+  windows_gap=$(jq -r '.glazewmConfig.windowsGap' "$RICE_SETTING_FILE_PATH")
+  corner_style=$(jq -r '.glazewmConfig.cornerStyle' "$RICE_SETTING_FILE_PATH")
+
+  yq \
+    ".window_effects.focused_window.border.color = \"$focused_color\" | \
+    .window_effects.other_windows.border.color = \"$other_color\" | \
+    .gaps.inner_gap = \"$windows_gap\" | \
+    .gaps.outer_gap.top = \"$windows_gap\" | \
+    .gaps.outer_gap.right = \"$windows_gap\" | \
+    .gaps.outer_gap.bottom = \"$windows_gap\" | \
+    .gaps.outer_gap.left = \"$windows_gap\" | \
+    .window_effects.focused_window.corner_style.style = \"$corner_style\" | \
+    .window_effects.other_windows.corner_style.style = \"$corner_style\"" \
+    "$SETTING_FILE_PATH" > tmp.yaml && mv tmp.yaml "$SETTING_FILE_PATH"
+
   echo "Reload GlazeWM configs..."
   glazewm command wm-reload-config > /dev/null
   echo "✅ GlazeWM theme applied!"

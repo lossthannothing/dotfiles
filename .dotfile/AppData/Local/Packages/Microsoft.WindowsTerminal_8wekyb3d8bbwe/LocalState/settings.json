@@ -57,13 +57,13 @@
   "profiles": {
     "defaults": {
       "adjustIndistinguishableColors": "indexed",
-      "colorScheme": "Gruvbox Dark Medium",
+      "colorScheme": "Jade",
       "cursorShape": "vintage",
       "elevate": true,
       "font": {
         "cellHeight": "1.2",
-        "face": "Pixel Code, Pixelcraft Nerd Font",
-        "size": 13.5
+        "face": "SpaceMono Nerd Font",
+        "size": 14
       },
       "opacity": 90,
       "padding": "16",
@@ -197,6 +197,29 @@
       "selectionBackground": "#2E303E",
       "white": "#CBCED0",
       "yellow": "#EFB993"
+    },
+    {
+      "background": "#0F1E23",
+      "black": "#0F1E23",
+      "blue": "#DDB169",
+      "brightBlack": "#C3C6C8",
+      "brightBlue": "#DDB169",
+      "brightCyan": "#B39A8D",
+      "brightGreen": "#6D8968",
+      "brightPurple": "#DB9AAB",
+      "brightRed": "#B1BE74",
+      "brightWhite": "#C3C6C8",
+      "brightYellow": "#B39A8D",
+      "cursorColor": "#DDB169",
+      "cyan": "#B39A8D",
+      "foreground": "#C3C6C8",
+      "green": "#6D8968",
+      "name": "Jade",
+      "purple": "#DB9AAB",
+      "red": "#B1BE74",
+      "selectionBackground": "#22444F",
+      "white": "#C3C6C8",
+      "yellow": "#B39A8D"
     },
     {
       "background": "#2B213C",

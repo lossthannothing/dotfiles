@@ -76,9 +76,9 @@
   typeset -g POWERLEVEL9K_DISABLE_RPROMPT=true
 
   # Context format when root: user@host. The first part white, the rest grey.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="⭐%F{$yellow}%n%F{$black}@%F{$red}%m"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=" %F{$yellow}%n%F{$black}@%F{$red}%m"
   # Context format when not root: user@host. The whole thing grey.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="⭐%F{$green}%n%F{$black}@%F{$red}%m"
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE=" %F{$green}%n%F{$black}@%F{$red}%m"
 
   # current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=$yellow
@@ -94,13 +94,13 @@
   # Don't show remote branch, current tag or stashes.
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   # Don't show the branch icon.
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='⚓'
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=' '
   # When in detached HEAD state, show @commit where branch normally goes.
   typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='x???x'
   # Show staged, unstaged, untracked indicators.
-  typeset -g POWERLEVEL9K_VCS_STAGED_ICON="%F{$red}+"
-  typeset -g POWERLEVEL9K_VCS_UNSTAGED_ICON="%F{$red}!"
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON="%F{$red}?"
+  typeset -g POWERLEVEL9K_VCS_STAGED_ICON="%F{$red}"
+  typeset -g POWERLEVEL9K_VCS_UNSTAGED_ICON="%F{$red}"
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON="%F{$red}"
   # Show '*' when there are staged, unstaged or untracked files.
   typeset -g POWERLEVEL9K_VCS_DIRTY_ICON=
   # Show '⇣' if local branch is behind remote.
@@ -124,12 +124,12 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
   # Default prompt symbol.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_CONTENT_EXPANSION='%B%F{green}✔ %F{yellow}⏵'
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_CONTENT_EXPANSION='%B%F{red}✘ %F{yellow}⏵'
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VICMD_CONTENT_EXPANSION='%B%F{green}✔ %F{yellow}VI ⏵'
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VICMD_CONTENT_EXPANSION='%B%F{red}✘ %F{yellow}VI ⏵'
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIVIS_CONTENT_EXPANSION='%B%F{green}✔ %F{yellow}VIS ⏵'
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIVIS_CONTENT_EXPANSION='%B%F{red}✘ %F{yellow}VIS ⏵'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_CONTENT_EXPANSION='%B%F{green} %F{yellow}⏵'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_CONTENT_EXPANSION='%B%F{red} %F{yellow}⏵'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VICMD_CONTENT_EXPANSION='%B%F{green} %F{yellow}VI ⏵'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VICMD_CONTENT_EXPANSION='%B%F{red} %F{yellow}VI ⏵'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIVIS_CONTENT_EXPANSION='%B%F{green} %F{yellow}VIS ⏵'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIVIS_CONTENT_EXPANSION='%B%F{red} %F{yellow}VIS ⏵'
   # Prompt symbol in overwrite vi mode is the same as in command mode.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
 

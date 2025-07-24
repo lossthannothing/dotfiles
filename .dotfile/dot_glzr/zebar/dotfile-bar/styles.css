@@ -123,6 +123,13 @@ body,
   font-size: 1.2rem;
 }
 
+.binding-mode {
+  background-color: var(--color-green);
+  border-radius: 2px;
+  border: none;
+  margin-right: 0.5rem;
+}
+
 .tiling-direction-icon {
   font-size: 1.2rem;
   background: none;

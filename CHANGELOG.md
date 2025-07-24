@@ -1,5 +1,11 @@
 # aquapaka-dotfiles
 
+## 3.2.1
+
+### Patch Changes
+
+- 4d8f058: fix: correct battery full icon for jade theme
+
 ## 3.2.0
 
 ### Minor Changes

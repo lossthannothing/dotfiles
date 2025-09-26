@@ -4,8 +4,8 @@
   "material-icon-theme.folders.color": "#b1be74",
   "material-icon-theme.files.color": "#b39a8d",
   "editor.fontFamily": "'SpaceMono Nerd Font'",
-  "editor.fontSize": 19,
-  "terminal.integrated.fontSize": 19,
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#ddb169",
     "terminalCursor.foreground": "#ddb169"

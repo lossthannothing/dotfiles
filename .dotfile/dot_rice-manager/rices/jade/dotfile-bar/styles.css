@@ -54,7 +54,7 @@
   height: 100vh;
   color: var(--color-foreground);
   font-family: "SpaceMono Nerd Font", ui-monospace, monospace;
-  font-size: 14pt;
+  font-size: 12pt;
   padding: 12px;
   padding-bottom: 0;
 }

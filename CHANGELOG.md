@@ -1,5 +1,17 @@
 # aquapaka-dotfiles
 
+## 3.3.0
+
+### Minor Changes
+
+- bf3a18f: feat: use smaller font-size for jade-theme
+- 022557d: feat: update wasabi theme
+
+### Patch Changes
+
+- 3a22216: chore: match default theme
+- 4818271: feat: add style for binding mode item
+
 ## 3.2.1
 
 ### Patch Changes

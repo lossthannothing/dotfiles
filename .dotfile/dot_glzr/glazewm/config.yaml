@@ -187,7 +187,7 @@ window_rules:
       - window_title: {equals: "Command Palette"}
       - window_title: {regex: "New Document|Color"}
         # Ignores photoshop panels and Davinci Resolve windows.
-      - window_process: {regex: "VALORANT-Win64-Shipping|League of Legends|FPSAimTrainer-Win64-Shipping|csgo|javaw|DeadByDaylight-Win64-Shipping"}
+      - window_process: {regex: "VALORANT-Win64-Shipping|League of Legends|FPSAimTrainer-Win64-Shipping|csgo|javaw|DeadByDaylight-Win64-Shipping|HuntGame"}
         # Ignore fullscreen games.
 
         window_class: {regex: ".*?"}

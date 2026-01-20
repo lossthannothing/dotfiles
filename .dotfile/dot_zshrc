@@ -1,6 +1,11 @@
+# --- Proxy Settings ---
+alias proxy="export http_proxy='http://127.0.0.1:7890'; export https_proxy='http://127.0.0.1:7890'; export HTTP_PROXY='http://127.0.0.1:7890'; export HTTPS_PROXY='http://127.0.0.1:7890'; echo 'Proxy ON'"
+alias unproxy="unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY; echo 'Proxy OFF'"
+
+proxy
 # # Print random art
 colorscript -r
-
+GITSTATUS_LOG_LEVEL=DEBUG
 # Created by newuser for 5.9
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -57,3 +62,4 @@ source ~/.p10k.zsh
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+

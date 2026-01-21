@@ -1,129 +1,259 @@
-# Starship 配置 - 替代 Powerlevel10k
-# 基于 p10k 的样式设计，保持相似的外观和功能
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold green)"
 
-add_newline = true
-format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_status\
-$time\
-$cmd_duration\
-$character
-"""
-
-# 超时时间，避免在非 git 目录等待
-scan_timeout = 10
-
-[username]
-show_always = true
-format = "  [$user]($style)"
-style_root = "yellow"
-style_user = "green"
-disabled = false
-
-[hostname]
-ssh_only = false
-format = "[$hostname]($style) "
-style = "red"
-disabled = false
-
-[directory]
-format = "[$path]($style) "
-style = "yellow"
-truncation_length = 3
-truncate_to_repo = true
-read_only = " "
-
-[git_branch]
-format = " [$symbol$branch]($style) "
-symbol = " "
-style = "cyan"
+[git_commit]
+tag_symbol = " tag "
 
 [git_status]
-format = "[$ahead$behind$staged$modified$untracked$ahead_behind]($style)"
-style = "red"
-modified = "[](red)"
-staged = "[](red)"
-untracked = "[](red)"
-ahead = "[⇡](red)"
-behind = "[⇣](red)"
-diverged = "[⇕](red)"
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
 
-[time]
-disabled = false
-format = "[$time]($style) "
-style = "black"
-time_format = "%H:%M"
-utc_time_offset = "local"
+[aws]
+symbol = "aws "
 
-[cmd_duration]
-min_time = 0
-show_milliseconds = true
-format = "[$duration]($style) "
-style = "yellow"
+[azure]
+symbol = "az "
 
-[character]
-success_symbol = "[✸ ](green)"
-error_symbol = "[✸ ](red)"
-vimcmd_symbol = "[VI ✸ ](green)"
-vimcmd_replace_one_symbol = "[VI REPL ✸ ](green)"
-vimcmd_replace_symbol = "[VI REPL ✸ ](green)"
-vimcmd_visual_symbol = "[VIS ✸ ](green)"
+[buf]
+symbol = "buf "
 
-# 语言相关模块（根据需要启用）
-[env_var.VIRTUAL_ENV]
-format = "[$env_value]($style) "
-style = "purple"
-symbol = "
+[bun]
+symbol = "bun "
 
-"
+[c]
+symbol = "C "
 
-[nodejs]
-disabled = false
-format = "[$symbol$version]($style) "
-symbol = "
-"
+[cpp]
+symbol = "C++ "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = "conda "
+
+[container]
+symbol = "container "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[daml]
+symbol = "daml "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
+
+[directory]
+read_only = " ro"
+
+[docker_context]
+symbol = "docker "
+
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+[fennel]
+symbol = "fnl "
+
+[fossil_branch]
+symbol = "fossil "
+
+[gcloud]
+symbol = "gcp "
+
+[git_branch]
+symbol = "git "
+
+[gleam]
+symbol = "gleam "
 
 [golang]
-disabled = false
-format = "[$symbol$version]($style) "
-symbol = "
+symbol = "go "
 
-"
+[gradle]
+symbol = "gradle "
 
-[python]
-disabled = false
-format = "[$symbol$pyenv_prefix$version]($style) "
-symbol = "
+[guix_shell]
+symbol = "guix "
 
-"
+[haskell]
+symbol = "haskell "
 
-[rust]
-disabled = false
-format = "[$symbol$version]($style) "
-symbol = "
+[helm]
+symbol = "helm "
 
-"
-
-[ruby]
-disabled = false
-format = "[$symbol$version]($style) "
-symbol = "
-
-"
+[hg_branch]
+symbol = "hg "
 
 [java]
-disabled = false
-format = "[$symbol$version]($style) "
-symbol = "
+symbol = "java "
 
-"
+[julia]
+symbol = "jl "
 
-[pkg]
-disabled = false
-format = "[$symbol$version]($style) "
-symbol = "
+[kotlin]
+symbol = "kt "
 
-"
+[lua]
+symbol = "lua "
+
+[nodejs]
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[meson]
+symbol = "meson "
+
+[nats]
+symbol = "nats "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[opa]
+symbol = "opa "
+
+[os.symbols]
+AIX = "aix "
+Alpaquita = "alq "
+AlmaLinux = "alma "
+Alpine = "alp "
+Amazon = "amz "
+Android = "andr "
+Arch = "rch "
+Artix = "atx "
+Bluefin = "blfn "
+CachyOS = "cach "
+CentOS = "cent "
+Debian = "deb "
+DragonFly = "dfbsd "
+Emscripten = "emsc "
+EndeavourOS = "ndev "
+Fedora = "fed "
+FreeBSD = "fbsd "
+Garuda = "garu "
+Gentoo = "gent "
+HardenedBSD = "hbsd "
+Illumos = "lum "
+Kali = "kali "
+Linux = "lnx "
+Mabox = "mbox "
+Macos = "mac "
+Manjaro = "mjo "
+Mariner = "mrn "
+MidnightBSD = "mid "
+Mint = "mint "
+NetBSD = "nbsd "
+NixOS = "nix "
+Nobara = "nbra "
+OpenBSD = "obsd "
+OpenCloudOS = "ocos "
+openEuler = "oeul "
+openSUSE = "osuse "
+OracleLinux = "orac "
+Pop = "pop "
+Raspbian = "rasp "
+Redhat = "rhl "
+RedHatEnterprise = "rhel "
+RockyLinux = "rky "
+Redox = "redox "
+Solus = "sol "
+SUSE = "suse "
+Ubuntu = "ubnt "
+Ultramarine = "ultm "
+Unknown = "unk "
+Uos = "uos "
+Void = "void "
+Windows = "win "
+
+[package]
+symbol = "pkg "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[pijul_channel]
+symbol = "pijul "
+
+[pixi]
+symbol = "pixi "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
+
+[python]
+symbol = "py "
+
+[quarto]
+symbol = "quarto "
+
+[raku]
+symbol = "raku "
+
+[rlang]
+symbol = "r "
+
+[ruby]
+symbol = "rb "
+
+[rust]
+symbol = "rs "
+
+[scala]
+symbol = "scala "
+
+[spack]
+symbol = "spack "
+
+[solidity]
+symbol = "solidity "
+
+[status]
+symbol = "[x](bold red) "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
+
+[typst]
+symbol = "typst "
+
+[terraform]
+symbol = "terraform "
+
+[zig]
+symbol = "zig "

@@ -1,16 +1,18 @@
 # --- Proxy Settings ---
+
+GITSTATUS_ENABLE_VCS_INFO=0
 alias proxy="export http_proxy='http://127.0.0.1:7890'; export https_proxy='http://127.0.0.1:7890'; export HTTP_PROXY='http://127.0.0.1:7890'; export HTTPS_PROXY='http://127.0.0.1:7890'; echo 'Proxy ON'"
 alias unproxy="unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY; echo 'Proxy OFF'"
 
 proxy
 # # Print random art
 colorscript -r
-GITSTATUS_LOG_LEVEL=DEBUG
 # Created by newuser for 5.9
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+# 强制指定 gitstatusd 的正确绝对路径
 # bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -54,11 +56,12 @@ cd() {
     builtin cd "$@" && ls;
 }
 
-# Prompt theme
-source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.p10k.zsh
+# Prompt theme - Starship (替代 Powerlevel10k)
+eval "$(starship init zsh)"
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+eval "$(fnm env --use-on-cd --shell zsh)"

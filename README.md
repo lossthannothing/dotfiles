@@ -218,9 +218,14 @@ pacman -S zsh
 Open **Powershell**, from your user folder (Example: ```C:\Users\JadeTam>```), run below command to install zsh themes and configs
 
 ```
-# Install Theme: Powerlevel10k
+# Install Starship Prompt (替代 Powerlevel10k)
+# 通过 winget 安装（推荐）
+winget install --id Starship.Starship
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ./.config/zsh/themes/powerlevel10k
+# 或使用其他方式安装：
+# - Chocolatey: choco install starship
+# - Scoop: scoop install starship
+# - Cargo: cargo install starship --locked
 
 # Install Fast Syntax Highlighting Plugin
 

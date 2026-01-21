@@ -1,0 +1,129 @@
+# Starship 配置 - 替代 Powerlevel10k
+# 基于 p10k 的样式设计，保持相似的外观和功能
+
+add_newline = true
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$time\
+$cmd_duration\
+$character
+"""
+
+# 超时时间，避免在非 git 目录等待
+scan_timeout = 10
+
+[username]
+show_always = true
+format = "  [$user]($style)"
+style_root = "yellow"
+style_user = "green"
+disabled = false
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+style = "red"
+disabled = false
+
+[directory]
+format = "[$path]($style) "
+style = "yellow"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " "
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = " "
+style = "cyan"
+
+[git_status]
+format = "[$ahead$behind$staged$modified$untracked$ahead_behind]($style)"
+style = "red"
+modified = "[](red)"
+staged = "[](red)"
+untracked = "[](red)"
+ahead = "[⇡](red)"
+behind = "[⇣](red)"
+diverged = "[⇕](red)"
+
+[time]
+disabled = false
+format = "[$time]($style) "
+style = "black"
+time_format = "%H:%M"
+utc_time_offset = "local"
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+format = "[$duration]($style) "
+style = "yellow"
+
+[character]
+success_symbol = "[✸ ](green)"
+error_symbol = "[✸ ](red)"
+vimcmd_symbol = "[VI ✸ ](green)"
+vimcmd_replace_one_symbol = "[VI REPL ✸ ](green)"
+vimcmd_replace_symbol = "[VI REPL ✸ ](green)"
+vimcmd_visual_symbol = "[VIS ✸ ](green)"
+
+# 语言相关模块（根据需要启用）
+[env_var.VIRTUAL_ENV]
+format = "[$env_value]($style) "
+style = "purple"
+symbol = "
+
+"
+
+[nodejs]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "
+"
+
+[golang]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "
+
+"
+
+[python]
+disabled = false
+format = "[$symbol$pyenv_prefix$version]($style) "
+symbol = "
+
+"
+
+[rust]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "
+
+"
+
+[ruby]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "
+
+"
+
+[java]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "
+
+"
+
+[pkg]
+disabled = false
+format = "[$symbol$version]($style) "
+symbol = "
+
+"

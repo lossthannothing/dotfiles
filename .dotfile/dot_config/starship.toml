@@ -139,6 +139,11 @@ symbol = "ml "
 [opa]
 symbol = "opa "
 
+[os]
+format = "[($name )]($style)"
+style = "bold cyan"
+disabled = false
+
 [os.symbols]
 AIX = "aix "
 Alpaquita = "alq "

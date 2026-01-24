@@ -1,0 +1,19 @@
+# Komorebi Application-Specific Configuration
+# Options for fixing specific application behaviors
+# Valid options: object_name_change, layered, tray_and_multi_window, force, border_overflow
+
+- name: "PowerToys"
+  identifier:
+    kind: Exe
+    id: PowerToys.exe
+    matching_strategy: Equals
+  options:
+    - tray_and_multi_window
+
+- name: "Discord"
+  identifier:
+    kind: Exe
+    id: Discord.exe
+    matching_strategy: Equals
+  options:
+    - tray_and_multi_window

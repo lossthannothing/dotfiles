@@ -1,0 +1,65 @@
+# whkd configuration for Komorebi
+# Based on previous GlazeWM keybindings
+
+.shell cmd
+
+# Focus windows
+alt + h : komorebic focus left
+alt + l : komorebic focus right
+alt + j : komorebic focus down
+alt + k : komorebic focus up
+
+# Move windows
+alt + shift + h : komorebic move left
+alt + shift + l : komorebic move right
+alt + shift + j : komorebic move down
+alt + shift + k : komorebic move up
+
+# Resize windows
+alt + u : komorebic resize-axis horizontal decrease
+alt + p : komorebic resize-axis horizontal increase
+alt + o : komorebic resize-axis vertical increase
+alt + i : komorebic resize-axis vertical decrease
+
+# Toggle layout/state
+alt + v : komorebic toggle-split
+alt + shift + space : komorebic toggle-float
+alt + t : komorebic toggle-tiling
+alt + f : komorebic toggle-maximize
+
+# Close window
+alt + shift + q : komorebic close
+
+# Komorebi management
+alt + shift + r : komorebic reload-configuration
+alt + shift + e : komorebic stop
+
+# Launch terminal
+alt + return : explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
+
+# Focus recent workspace
+alt + d : komorebic focus-last-workspace
+
+# Focus workspaces
+alt + 1 : komorebic focus-workspace 0
+alt + 2 : komorebic focus-workspace 1
+alt + 3 : komorebic focus-workspace 2
+alt + 4 : komorebic focus-workspace 3
+alt + 5 : komorebic focus-workspace 4
+alt + 6 : komorebic focus-workspace 5
+alt + 7 : komorebic focus-workspace 6
+alt + 8 : komorebic focus-workspace 7
+alt + 9 : komorebic focus-workspace 8
+alt + 0 : komorebic focus-workspace 9
+
+# Move to workspaces
+alt + shift + 1 : komorebic move-to-workspace 0
+alt + shift + 2 : komorebic move-to-workspace 1
+alt + shift + 3 : komorebic move-to-workspace 2
+alt + shift + 4 : komorebic move-to-workspace 3
+alt + shift + 5 : komorebic move-to-workspace 4
+alt + shift + 6 : komorebic move-to-workspace 5
+alt + shift + 7 : komorebic move-to-workspace 6
+alt + shift + 8 : komorebic move-to-workspace 7
+alt + shift + 9 : komorebic move-to-workspace 8
+alt + shift + 0 : komorebic move-to-workspace 9

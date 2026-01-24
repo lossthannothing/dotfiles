@@ -6,10 +6,23 @@
     "face": "Monofur Nerd Font Mono",
     "size": 17
   },
-  "glazewmConfig": {
-    "focusedWindowsColor": "#c594ff",
-    "otherWindowsColor": "#2b213c",
-    "windowsGap": "8px",
-    "cornerStyle": "rounded"
+  "komorebiConfig": {
+    "borderColours": {
+      "single": "#c594ff",
+      "stack": "#c594ff",
+      "monocle": "#c594ff",
+      "unfocused": "#2b213c",
+      "floating": "#c594ff"
+    },
+    "borderWidth": 2,
+    "borderStyle": "Rounded",
+    "workspacePadding": 8,
+    "containerPadding": 8,
+    "workAreaOffset": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
   }
 }

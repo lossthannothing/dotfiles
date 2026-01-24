@@ -6,10 +6,23 @@
     "face": "Pixelcraft Nerd Font",
     "size": 13.5
   },
-  "glazewmConfig": {
-    "focusedWindowsColor": "#59C2FF",
-    "otherWindowsColor": "#0F1419",
-    "windowsGap": "8px",
-    "cornerStyle": "rounded"
+  "komorebiConfig": {
+    "borderColours": {
+      "single": "#59C2FF",
+      "stack": "#59C2FF",
+      "monocle": "#59C2FF",
+      "unfocused": "#0F1419",
+      "floating": "#59C2FF"
+    },
+    "borderWidth": 2,
+    "borderStyle": "Rounded",
+    "workspacePadding": 8,
+    "containerPadding": 8,
+    "workAreaOffset": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
   }
 }

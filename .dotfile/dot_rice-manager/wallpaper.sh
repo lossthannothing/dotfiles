@@ -6,17 +6,24 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("aqua" "wasabi" "shuri" "jade")
+availableThemes=("jade" "wasabi" "aqua" "shuri" "arcade" "julia" "khanhoa" "khlinh" "meimei" "mtram" "tlinh")
 
 usage() {
   printf "
 Rice Script for change rice's current wallpaper
 
 Usage:
-`basename $0`\t[aqua]  \t A playful, mysterious girl with eyes like shimmering aqua, her movements graceful and quick, full of curiosity and charm
-\t[wasabi] \t Mysterious and alluring, with eyes like deep ocean blue and an aura of fire, she exudes both danger and enchantment
-\t[shuri] \t A gentle presence in shades of purple, like twilight’s soft embrace—quietly comforting, effortlessly lovely
-\t[jade] \t Introspective and layered, a soul with raw edges, nostalgic warmth, and unspoken strength
+$(basename $0)\t[jade]    \t Introspective and layered, a soul with raw edges, nostalgic warmth
+\t[wasabi]  \t Mysterious and alluring, with eyes like deep ocean blue
+\t[aqua]    \t Full of curiosity and charm, like ocean waves
+\t[shuri]   \t A gentle presence in shades of purple, like twilight's soft embrace
+\t[arcade]  \t Neon gamer vibes, electrifying and bold
+\t[julia]   \t Horizon dark theme with warm colors
+\t[khanhoa] \t Light theme with natural green accents
+\t[khlinh]  \t Tomorrow night theme with cozy colors
+\t[meimei]  \t Simple-Elegance dark theme with yellow accent
+\t[mtram]   \t Everforest dark theme
+\t[tlinh]   \t Monokai pro theme with vibrant colors
 "
 }
 
@@ -29,7 +36,7 @@ set_desktop_wallpaper() {
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
-for theme in "${avaiableThemes[@]}"; do
+for theme in "${availableThemes[@]}"; do
   if [[ "$1" == "$theme" ]]; then
     echo "Changing wallpaper to $theme theme's wallpaper..."
 

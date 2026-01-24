@@ -1,0 +1,61 @@
+{
+  "$schema": "https://komorebi.lgug2z.com/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "mouse_follows_focus": true,
+  "default_workspace_padding": 12,
+  "default_container_padding": 12,
+  "global_work_area_offset": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0
+  },
+  "border": true,
+  "border_implementation": "Windows",
+  "border_width": 2,
+  "border_offset": -1,
+  "border_style": "Rounded",
+  "border_colours": {
+    "single": "#b39a8d",
+    "stack": "#b39a8d",
+    "monocle": "#b39a8d",
+    "unfocused": "#0f1e23",
+    "floating": "#b39a8d"
+  },
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#b39a8d",
+      "unfocused_text": "#6F6F70",
+      "background": "#0f1e23"
+    }
+  },
+  "transparency": false,
+  "transparency_alpha": 200,
+  "animation": {
+    "enabled": true,
+    "duration": 200,
+    "style": "EaseOutQuad",
+    "fps": 60
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        { "name": "1", "layout": "BSP" },
+        { "name": "2", "layout": "BSP" },
+        { "name": "3", "layout": "BSP" },
+        { "name": "4", "layout": "BSP" },
+        { "name": "5", "layout": "BSP" },
+        { "name": "6", "layout": "BSP" },
+        { "name": "7", "layout": "BSP" },
+        { "name": "8", "layout": "BSP" },
+        { "name": "9", "layout": "BSP" },
+        { "name": "0", "layout": "BSP" }
+      ]
+    }
+  ]
+}
